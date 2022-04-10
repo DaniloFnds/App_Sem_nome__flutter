@@ -107,6 +107,9 @@ class MenuRestaurantScreen extends StatelessWidget {
                   children: _generateCategoryTab(),
                 ),
               ),
+              SingleChildScrollView(
+                child: Text('asd'),
+              )
             ],
           ),
         ),

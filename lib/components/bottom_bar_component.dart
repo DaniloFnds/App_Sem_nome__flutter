@@ -14,11 +14,6 @@ class BottomBarComponent extends StatefulWidget {
 class _BottomBarComponentState extends State<BottomBarComponent> {
   @override
   Widget build(BuildContext context) {
-    const placeholder = Opacity(
-      opacity: 0,
-      child: IconButton(icon: Icon(Icons.no_cell), onPressed: null),
-    );
-
     return BottomAppBar(
       shape: const CircularNotchedRectangle(),
       notchMargin: 10,
