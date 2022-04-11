@@ -2,6 +2,7 @@ import 'package:app_sem_nome/components/restaurant_logo_small_component.dart';
 import 'package:app_sem_nome/components/score_component.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:nuvigator/next.dart';
 
 import 'heart_component.dart';
 
@@ -10,6 +11,7 @@ class RestaurantDetailComponent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final nuv = Nuvigator.of(context);
     return Container(
       height: 350,
       color: const Color(0xFF737373),
@@ -103,7 +105,9 @@ class RestaurantDetailComponent extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   ElevatedButton(
-                    onPressed: () => print('click ver cardapio'),
+                    onPressed: () {
+                      nuv.open('menu-restaurant');
+                    },
                     child: const Text('Ver Cardapio'),
                   ),
                 ],
