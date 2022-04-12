@@ -33,7 +33,7 @@ class MenuRestaurantScreen extends StatelessWidget {
           SliverPersistentHeader(delegate: _SLiverAppBarDelegate(), pinned: true),
           SliverList(delegate: SliverChildListDelegate(_generateCardapio()))
         ],
-      ),
+      )
     );
   }
 }
@@ -46,11 +46,11 @@ class _SLiverAppBarDelegate extends SliverPersistentHeaderDelegate {
       decoration: BoxDecoration(color: Colors.grey[50], boxShadow: [
         overlapsContent
             ? BoxShadow(
-          color: Colors.grey.withOpacity(0.5),
-          spreadRadius: 5,
-          blurRadius: 7,
-          offset: Offset(0, 3), // changes position of shadow
-        )
+                color: Colors.grey.withOpacity(0.5),
+                spreadRadius: 5,
+                blurRadius: 7,
+                offset: Offset(0, 3), // changes position of shadow
+              )
             : BoxShadow()
       ]),
       child: ListView(
@@ -106,14 +106,14 @@ List<Widget> _generateCategoryTab() {
 List<Widget> _generateCardapio() {
   List<GroupItemCardComponent> lista = [];
   Map<String, double> mapItens =
-  Map.of({"Bacalhau": 100.0, "XSalada": 30.0, "Parmegiana": 25.0, "Carioca": 40.0, "Feijoada": 30.0, "Coca": 4.00});
+      Map.of({"Bacalhau": 100.0, "XSalada": 30.0, "Parmegiana": 25.0, "Carioca": 40.0, "Feijoada": 30.0, "Coca": 4.00});
   _mocksNames.forEach((element) {
     List<ItemCardComponent> listaItem = [];
     mapItens.forEach((key, value) {
       listaItem.add(
-          ItemCardComponent(
-            itemCard: ItemCard(key, value),
-          ),
+        ItemCardComponent(
+          itemCard: ItemCard(key, value),
+        ),
       );
     });
     lista.add(GroupItemCardComponent(itemsCard: listaItem, nomeGroup: element));

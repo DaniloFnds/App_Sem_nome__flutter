@@ -10,6 +10,7 @@ class ItemCardComponent extends StatelessWidget {
   Widget build(BuildContext context) {
     var tamanho = MediaQuery.of(context).size;
     var largura = tamanho.width;
+
     return Container(
       width: double.infinity,
       padding: EdgeInsets.only(left: 5),
